@@ -1,8 +1,8 @@
 - model: shop.product
   pk: 1
   fields:
-    name: Стол
-    price: 2000
+    name: Видеокарта GigaByte GeForce GTX 1660 OC 6144Mb
+    price: 55070
 - model: shop.product
   pk: 2
   fields:
