@@ -2,25 +2,35 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Товары</title>
+    <title>Магазин компьютеров</title>
 </head>
 <body>
-    <div>
-        <h3>Список</h3>
-        <table>
-            <tr>
-                <td><p>Наименование</p></td>
-                <td><p>Цена</p></td>
-                <td></td>
-            </tr>
-            {% for p in products %}
-                <tr>
-                    <td><p>{{ p.name }}</p></td>
-                    <td><p>{{ p.price }}</p></td>
-                    <td><p><a href="/buy/{{ p.id }}">Купить</a></p></td>
-                </tr>
-            {% endfor %}
-        </table>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h1 class="my-0 mr-md-auto font-weight-normal">Kompov.net</h1>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="/">Каталог</a>
+            <a class="p-2 text-dark" href="#">Промокод</a>
+        </nav>
     </div>
+<div>
+    <h3>Список</h3>
+    <table>
+        <tr>
+            <td><p>Наименование</p></td>
+            <td><p>Цена</p></td>
+            <td></td>
+        </tr>
+        {% for p in products %}
+        <div class="alert alert-warning mt-2">
+        <tr>
+            <td><p>{{ p.name }}</p></td>
+            <td><p>{{ p.price }}</p></td>
+            <td><p><a href="/buy/{{ p.id }}">Купить</a></p></td>
+        </tr>
+        </div>
+        {% endfor %}
+    </table>
+</div>
+
 </body>
 </html>

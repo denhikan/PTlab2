@@ -6,7 +6,7 @@ from .models import Product, Purchase
 
 # Create your views here.
 def index(request):
-    products = Product.objects.all()
+    products = Product.objects.order_by('-id')
     context = {'products': products}
     return render(request, 'shop/index.html', context)
 
